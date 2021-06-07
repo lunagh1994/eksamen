@@ -1,0 +1,68 @@
+* body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+}
+
+.navbar {
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #efd691;
+}
+
+.burgerButton {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  padding-left: 2em;
+}
+.streg1 {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+}
+
+.streg2 {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  transform: translateY(3px);
+}
+
+.streg3 {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  transform: translateY(6px);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+  padding-left: 25px;
+  padding-bottom: 0rem;
+  list-style: none;
+  overflow-x: scroll;
+  flex-direction: column;
+}
+
+.navbar .navbarLinks li {
+  list-style: none;
+}
+
+.navbar .navbarLinks li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .navbar ul {
+    flex-direction: row;
+  }
+}
