@@ -5,13 +5,75 @@
   background-color: white;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
+/************** Splashbillede ****************/
+
+.splash {
   width: 100%;
-  height: 100px;
-  background-color: #5555;
+  height: auto;
+}
+
+/************** Tekst forside ****************/
+.index_title {
+  text-align: center;
+  font-family: "redwing", sans-serif;
+  color: #223249;
+  font-weight: 400;
+  font-size: 4vw;
+  margin: 3vw;
+}
+
+.index_line {
+  background-image: url(hvidstreg.svg);
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 5vw;
+}
+
+.index_subtitle {
+  text-align: center;
+  font-family: "redwing", sans-serif;
+  color: #223249;
+  font-weight: 800;
+  font-size: 4.5vw;
+}
+
+/************** Bokse ****************/
+
+.section_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: #7c7c7c;
+  margin-left: 150px;
+  border-radius: 100px;
+}
+
+.box2 {
+  grid-column: 2/5;
+  width: 200px;
+  height: 200px;
+  background-color: #7c7c7c;
+  margin-left: 150px;
+  border-radius: 100px;
+}
+
+.box3 {
+  width: 200px;
+  height: 200px;
+  background-color: #7c7c7c;
+  margin-left: 150px;
+  border-radius: 100px;
+}
+
+p {
+  padding-top: 25px;
+  font-family: roboto;
+  grid-column: 2/4;
 }
 
 /************** Burgermenu ****************/
@@ -22,57 +84,109 @@
   right: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+
+  cursor: pointer;
+
+  z-index: 100;
 }
 
 .streg1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-0.5rem);
+
   width: 100%;
   height: 3px;
-  background-color: #575756;
+  background-color: white;
   border-radius: 10px;
+  transition: transform 1s;
+}
+.streg1.aktiv {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .streg2 {
+  position: absolute;
+  top: 50%;
+
   width: 100%;
   height: 3px;
-  background-color: #575756;
+  background-color: white;
   border-radius: 10px;
+  transition: transform 1s;
+}
+
+.streg2.aktiv {
+  opacity: 0;
 }
 
 .streg3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(0.5rem);
+
   width: 100%;
   height: 3px;
-  background-color: #575756;
+  background-color: white;
   border-radius: 10px;
+  transition: transform 1s;
+}
+.streg3.aktiv {
+  transform: translateY(0) rotate(45deg);
 }
 
 /************** Navbar ****************/
 
+.navbar {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+
+  background-color: #7c7c7c;
+}
 
 .navbar ul {
   display: flex;
   height: 100%;
   justify-content: space-evenly;
-  margin-top: 30px;
 
+  width: 100%;
   list-style: none;
   flex-direction: column;
+  margin: 35px;
 }
 
 .navbar .navbarLinks {
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
 }
+
+.navbar .navbarLinks.aktiv {
+  display: block;
+  background-color: #7c7c7c;
+}
+
 .navbar .navbarLinks li {
   list-style: none;
 }
 
 .navbar .navbarLinks li a {
   text-decoration: none;
-  color: #575756;
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-family: redwing;
 }
 
 .navbar .navbarLinks li a:hover {
@@ -80,24 +194,21 @@
 }
 /************** logo ****************/
 
-.navbar .logo {
-  width: auto;
-  height: 100%;
-  margin-bottom: 0.5rem;
+.navbar img {
+  width: 120px;
+  padding: 18px;
 }
-
-.logo {
-  width: 100%;¨
-  height: 100%;
- 
-}
-
 
 /************** Tekst styling ****************/
 
-h1{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+h1 {
+  text-align: center;
+  font-family: redwing;
+}
+
+@font-face {
+  font-family: "redwing";
+  src: url("redwing/redwing-light-webfont.woff2") format("woff2");
 }
 
 /*************Desktop************** */
@@ -109,5 +220,12 @@ h1{
 
   .burgerButton {
     display: none;
+  }
+
+  .navbar .navbarLinks {
+    position: static;
+    width: 100vw;
+    height: auto;
+    display: block;
   }
 }
