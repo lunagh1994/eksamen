@@ -5,75 +5,139 @@
   background-color: white;
 }
 
-/************** Splashbillede ****************/
+main {
+  max-width: 1000px;
+  margin: auto;
+}
 
-.splash {
+footer {
+  padding-top: 80px;
+  text-align: center;
+  font-family: "redwing", sans-serif;
+}
+
+img {
   width: 100%;
   height: auto;
 }
 
+/************** styling knap ****************/
+
+.btn a {
+  text-decoration: none;
+  font-family: "redwing", sans-serif;
+  color: white;
+  margin-left: 17px;
+  padding: 10px;
+  background-color: #223249;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
 /************** Tekst forside ****************/
-.index_title {
+.splash {
+  background-image: url(img//splash.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 125vh;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.linje_forside {
+  /* width: 50%;
+  height: 10px; */
+  background-color: black;
+  height: 2px;
+  width: 70%;
+  place-self: center;
+  grid-row: 7/8;
+  margin-top: -12px;
+}
+
+.text_forside1 {
   text-align: center;
   font-family: "redwing", sans-serif;
   color: #223249;
   font-weight: 400;
-  font-size: 4vw;
-  margin: 3vw;
+  font-size: 5vw;
+  grid-row: 6/7;
+  margin-top: 20px;
 }
 
-.index_line {
-  background-image: url(hvidstreg.svg);
-  background-repeat: no-repeat;
-  width: 50vw;
-  height: 5vw;
-}
-
-.index_subtitle {
+.text_forside2 {
   text-align: center;
   font-family: "redwing", sans-serif;
   color: #223249;
-  font-weight: 800;
-  font-size: 4.5vw;
+  font-weight: 400;
+  font-size: 5vw;
+  grid-row: 8/9;
+  text-align: center;
+  margin-top: -16px;
+}
+
+.forside_tekst {
+  padding-top: 25px;
+  padding-inline: 76px;
+  font-family: "Roboto";
+  margin-top: -4px;
+  margin-bottom: 106px;
 }
 
 /************** Bokse ****************/
-
-.section_wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
 .box1 {
-  width: 200px;
-  height: 200px;
-  background-color: #7c7c7c;
-  margin-left: 150px;
-  border-radius: 100px;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 .box2 {
-  grid-column: 2/5;
-  width: 200px;
-  height: 200px;
-  background-color: #7c7c7c;
-  margin-left: 150px;
-  border-radius: 100px;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 .box3 {
-  width: 200px;
-  height: 200px;
-  background-color: #7c7c7c;
-  margin-left: 150px;
-  border-radius: 100px;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 p {
   padding-top: 25px;
-  font-family: roboto;
-  grid-column: 2/4;
+  padding-inline: 20px;
+  font-family: "Roboto";
+  margin-top: -4px;
+  margin-bottom: 23px;
+}
+
+.paragraf_midte {
+  padding-top: 25px;
+  /* font-family: roboto; */
+}
+
+.pic_doku {
+  width: 100%;
+  height: auto;
+}
+
+/* ************* Hover på Billede ***************  */
+
+.section_wrapper {
+  /* width: 1100px; */
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+.section_wrapper .box1,
+.section_wrapper .box2 {
+  /* width: 430px;
+  height: 275px; */
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.section_wrapper .box1:hover,
+.section_wrapper .box2:hover {
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
 }
 
 /************** Burgermenu ****************/
@@ -89,7 +153,6 @@ p {
   height: 1.8rem;
 
   cursor: pointer;
-
   z-index: 100;
 }
 
@@ -139,7 +202,6 @@ p {
 }
 
 /************** Navbar ****************/
-
 .navbar {
   z-index: 10;
   width: 100vw;
@@ -159,7 +221,6 @@ p {
   height: 100%;
   justify-content: space-evenly;
 
-  width: 100%;
   list-style: none;
   flex-direction: column;
   margin: 35px;
@@ -187,6 +248,7 @@ p {
   text-decoration: none;
   color: white;
   font-family: redwing;
+  font-size: 1.5rem;
 }
 
 .navbar .navbarLinks li a:hover {
@@ -204,6 +266,7 @@ p {
 h1 {
   text-align: center;
   font-family: redwing;
+  margin-top: 29px;
 }
 
 @font-face {
@@ -227,5 +290,51 @@ h1 {
     width: 100vw;
     height: auto;
     display: block;
+  }
+
+  .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .box1 {
+    margin-left: 20px;
+  }
+
+  .box2 {
+    grid-column: 3/4;
+    margin-right: 20px;
+  }
+
+  .box3 {
+    margin-left: 20px;
+  }
+
+  .p_btn {
+    padding-top: 25px;
+    font-family: "Roboto";
+    grid-column: 2/4;
+  }
+
+  .paragraf_midte {
+    padding-top: 25px;
+    font-family: Roboto;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .container_portræt {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /***** denne del er en nødløsning på billed problemerne. ******/
+  .section_wrapper .box1,
+  .section_wrapper .box2 {
+    width: 430px;
+    height: 275px;
+    overflow: hidden;
+    transition: 0.5s;
   }
 }
