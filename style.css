@@ -8,6 +8,7 @@
 main {
   max-width: 1000px;
   margin: auto;
+  display: block;
 }
 
 footer {
@@ -19,6 +20,7 @@ footer {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 /************** styling knap ****************/
@@ -36,7 +38,7 @@ img {
 
 /************** Tekst forside ****************/
 .splash {
-  background-image: url(img//splash.jpg);
+  background-image: url(img//skov.JPG);
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -49,7 +51,7 @@ img {
 .linje_forside {
   /* width: 50%;
   height: 10px; */
-  background-color: black;
+  background-color: white;
   height: 2px;
   width: 70%;
   place-self: center;
@@ -60,7 +62,7 @@ img {
 .text_forside1 {
   text-align: center;
   font-family: "redwing", sans-serif;
-  color: #223249;
+  color: white;
   font-weight: 400;
   font-size: 5vw;
   grid-row: 6/7;
@@ -70,7 +72,7 @@ img {
 .text_forside2 {
   text-align: center;
   font-family: "redwing", sans-serif;
-  color: #223249;
+  color: white;
   font-weight: 400;
   font-size: 5vw;
   grid-row: 8/9;
@@ -88,37 +90,42 @@ img {
 
 /************** Bokse ****************/
 .box1 {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 50px;
 }
 
 .box2 {
-  margin-left: 20px;
-  margin-top: 50px;
+  /* margin-left: 20px; */
+  margin-top: 63px;
 }
 
 .box3 {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 50px;
 }
 
 p {
-  padding-top: 25px;
+  padding-top: 2px;
   padding-inline: 20px;
   font-family: "Roboto";
   margin-top: -4px;
   margin-bottom: 23px;
 }
 
-.paragraf_midte {
-  padding-top: 25px;
+.paragraf_midte p {
+  padding-top: 2px;
   /* font-family: roboto; */
 }
 
-.pic_doku {
+.paragraf_midte h2 {
+  padding-top: 2px;
+  /* font-family: roboto; */
+}
+
+/* .pic_doku {
   width: 100%;
   height: auto;
-}
+} */
 
 /* ************* Hover på Billede ***************  */
 
@@ -267,6 +274,11 @@ h1 {
   text-align: center;
   font-family: redwing;
   margin-top: 29px;
+}
+
+.h2 {
+  font-family: "Roboto";
+  margin-left: 20px;
 }
 
 @font-face {
