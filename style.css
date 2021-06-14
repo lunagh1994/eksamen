@@ -39,7 +39,7 @@ img {
   margin-left: 2rem;
 }
 
-/************** Tekst forside ****************/
+/************** Tekst forside + splash ****************/
 .splash {
   background-image: url(img//skov.JPG);
   width: 100%;
@@ -88,7 +88,7 @@ img {
   margin-bottom: 6.6rem;
 }
 
-/************** Bokse ****************/
+/************** Bokse margin og p styling ****************/
 .box1 {
   margin-top: 50px;
 }
@@ -118,14 +118,14 @@ p {
 /* ************* Hover på Billede ***************  */
 
 .section_wrapper .box1,
-.section_wrapper .box2 {
+.section_wrapper_2 .box2 {
   overflow: hidden;
   transition: 0.5s;
 }
 
-.section_wrapper .box1:hover,
-.section_wrapper .box2:hover {
-  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
+.section_wrapper .box1 img:hover,
+.section_wrapper_2 .box2 img:hover {
+  box-shadow: 0px -1px 0px 2px rgba(5, 0, 0, 0.28);
 }
 
 /************** Burgermenu ****************/
@@ -302,7 +302,13 @@ h1 {
 
   .section_wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px;
+  }
+
+  .section_wrapper_2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
     gap: 20px;
   }
 
@@ -344,22 +350,12 @@ h1 {
     padding-top: 25px;
     font-family: Roboto;
     grid-column: 2/3;
-    grid-row: 3/4;
     margin-bottom: 1.25rem;
   }
 
   .container_portraet {
     display: grid;
     grid-template-columns: 2fr 1fr;
-  }
-
-  /***** denne del er en nødløsning på billed problemerne. ******/
-  .section_wrapper .box1,
-  .section_wrapper .box2 {
-    width: 26.8rem;
-    height: 15rem;
-    overflow: hidden;
-    transition: 0.5s;
   }
 
   .forside_tekst {
