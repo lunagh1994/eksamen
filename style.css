@@ -11,6 +11,10 @@ main {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 footer {
   padding-top: 80px;
   text-align: center;
@@ -20,7 +24,6 @@ footer {
 img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 /************** styling knap ****************/
@@ -29,11 +32,11 @@ img {
   text-decoration: none;
   font-family: "redwing", sans-serif;
   color: white;
-  margin-left: 17px;
   padding: 10px;
   background-color: #223249;
   border: 2px solid white;
   border-radius: 20px;
+  margin-left: 2rem;
 }
 
 /************** Tekst forside ****************/
@@ -42,15 +45,13 @@ img {
   width: 100%;
   background-size: cover;
   background-position: center;
-  height: 125vh;
+  height: 66vh;
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: 1fr;
 }
 
 .linje_forside {
-  /* width: 50%;
-  height: 10px; */
   background-color: white;
   height: 2px;
   width: 70%;
@@ -66,7 +67,7 @@ img {
   font-weight: 400;
   font-size: 5vw;
   grid-row: 6/7;
-  margin-top: 20px;
+  margin-top: -22px;
 }
 
 .text_forside2 {
@@ -81,63 +82,43 @@ img {
 }
 
 .forside_tekst {
-  padding-top: 25px;
-  padding-inline: 76px;
+  padding-top: 7.56rem;
   font-family: "Roboto";
-  margin-top: -4px;
-  margin-bottom: 106px;
+  margin-top: -4.75rem;
+  margin-bottom: 6.6rem;
 }
 
 /************** Bokse ****************/
 .box1 {
-  /* margin-left: 20px; */
   margin-top: 50px;
 }
 
 .box2 {
-  /* margin-left: 20px; */
   margin-top: 63px;
-}
-
-.box3 {
-  /* margin-left: 20px; */
-  margin-top: 50px;
 }
 
 p {
   padding-top: 2px;
-  padding-inline: 20px;
+  /* padding-inline: 20px; */
   font-family: "Roboto";
   margin-top: -4px;
   margin-bottom: 23px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .paragraf_midte p {
   padding-top: 2px;
-  /* font-family: roboto; */
 }
 
 .paragraf_midte h2 {
   padding-top: 2px;
-  /* font-family: roboto; */
 }
-
-/* .pic_doku {
-  width: 100%;
-  height: auto;
-} */
 
 /* ************* Hover på Billede ***************  */
 
-.section_wrapper {
-  /* width: 1100px; */
-  /* display: flex;
-  flex-wrap: wrap; */
-}
 .section_wrapper .box1,
 .section_wrapper .box2 {
-  /* width: 430px;
-  height: 275px; */
   overflow: hidden;
   transition: 0.5s;
 }
@@ -278,7 +259,22 @@ h1 {
 
 .h2 {
   font-family: "Roboto";
-  margin-left: 20px;
+  margin-left: 2rem;
+}
+
+.h3 {
+  font-family: "Roboto";
+}
+
+.linje_om_mig {
+  background-color: black;
+  height: 2px;
+  width: 82%;
+  margin-left: 2rem;
+  /* place-self: center;
+  margin-top: -4px;
+  margin-bottom: 23px;
+  margin-left: 20px; */
 }
 
 @font-face {
@@ -315,7 +311,8 @@ h1 {
   }
 
   .box2 {
-    grid-column: 3/4;
+    grid-column: 2/3;
+    grid-row: 2/3;
     margin-right: 20px;
   }
 
@@ -324,19 +321,34 @@ h1 {
   }
 
   .p_btn {
-    padding-top: 25px;
+    /* padding-top: -0.1rem; */
     font-family: "Roboto";
-    grid-column: 2/4;
   }
 
   .paragraf_midte {
-    padding-top: 25px;
+    padding-top: 2.5rem;
     font-family: Roboto;
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 2/3;
+    margin-bottom: 1.25rem;
   }
 
-  .container_portræt {
+  .paragraf_top {
+    padding-top: 25px;
+    font-family: Roboto;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .paragraf_bund {
+    padding-top: 25px;
+    font-family: Roboto;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: 1.25rem;
+  }
+
+  .container_portraet {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
@@ -344,9 +356,21 @@ h1 {
   /***** denne del er en nødløsning på billed problemerne. ******/
   .section_wrapper .box1,
   .section_wrapper .box2 {
-    width: 430px;
-    height: 275px;
+    width: 26.8rem;
+    height: 15rem;
     overflow: hidden;
     transition: 0.5s;
+  }
+
+  .forside_tekst {
+    /* padding-inline: 4.75rem; */
+    text-align: center;
+  }
+
+  /************** portræt ****************/
+
+  .image {
+    margin-top: 8rem;
+    margin-left: 2rem;
   }
 }
