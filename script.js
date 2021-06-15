@@ -7,7 +7,7 @@ const navbarLinks = document.querySelector(".navbarLinks");
 // Når HTML og CSS er loaded startes sidenVises
 window.addEventListener("load", sidenVises);
 
-// Når #burger_btn er "clicked" startes openMenu
+// Når #burger_btn er "clicked" startes open
 function sidenVises() {
   burgerButton.addEventListener("click", open);
 }
